@@ -75,8 +75,49 @@ nav a:hover{
     display: flex;
     gap: 50px;
 }
-.main-section-div{
+.main-div{
+    margin-top: 128px;
     display: flex;
-    
-    gap: 100px;
+    gap: 180px;
 }
+.circle-flex{
+    display: flex;
+    gap: 2px;
+    align-items: center;
+}
+.circle-flex{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    color: rgba(30, 33, 44, 1);
+}
+.circle-flex1{
+    border-radius: 50%;
+    width: 84px;
+    height: 84px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background:rgba(241, 202, 194, 255) ;
+}
+.circle-flex2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    background: rgba(255, 63, 58, 1);
+}
+.main-section-title h1{
+    width: 496px;
+    height: 249px;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 130%;
+    letter-spacing: 1px;
+    color: rgba(30, 33, 44, 1);
+}
+
