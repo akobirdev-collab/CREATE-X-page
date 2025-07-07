@@ -399,7 +399,6 @@ nav a:hover{
     height: 46px;
     display: flex;
 }
-
 .feedback-box div .exp{
     color: rgba(255, 63, 58, 1);
 }
@@ -408,4 +407,149 @@ nav a:hover{
     line-height: 160%;
     color: rgba(154, 156, 165, 1);
 }
+.fourth-section-middle{
+    display: flex;
+    justify-content: space-between;  
+}
+.fourth-section-middle div{
+    margin-top: 182px;
+    width: 495px;
+    height: 196px;
+}
+.fourth-section-middle  img{
+    margin-top: 60px;
+    margin-bottom: 120px;
+}
+.fourth-section-middle div h2{
+    padding-bottom: 32px;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 130%;
+    color: rgba(30, 33, 44, 1);
+}
+.fourth-section-middle div span{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: rgba(66, 69, 81, 1);
+}
+/*fifth section style*/
+.fifth-section{
+    background: rgba(245, 220, 213, 255);
+}
+.fifth-section-title{
+        padding-top: 80px;
+        text-align: center;
+        align-items: center;
+}
+.time-workshop-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 32px 40px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.3);
+    border-radius: 10px;
+    height: 126px;
+    transition: all 0.2s ease;
+    margin-bottom: 20px;
+}
 
+.time-workshop-item:hover {
+    box-shadow: 0 12px 10px -6px rgba(255, 63, 58, 0.5);
+}
+
+.p1 {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 130%;
+    color: rgba(255, 63, 58, 1);
+    margin-left: 20px;
+    width: 57px;
+    height: 62px;
+}
+
+.time-workshop-cloc {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100px;
+    height: 50px;
+}
+
+.span1 {
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(30, 33, 44, 1);
+}
+
+.span2 {
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(120, 122, 128, 1);
+}
+
+.master-class {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.master-class p {
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(30, 33, 44, 1);
+}
+
+.master-class span {
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(120, 122, 128, 1);
+}
+
+.time-workshop button {
+    margin-left: auto;
+    width: 136px;
+    height: 44px;
+    font-weight: 700;
+    font-size: 14px;
+    color: rgba(245, 47, 110, 1);
+    border: 1px solid rgba(247, 94, 5, 1);
+    border-radius: 4px;
+    cursor: pointer;
+    background: transparent;
+    letter-spacing: 0.5px;
+    
+}
+ 
+.time-workshop button:hover {
+    transition: all 0.2s;
+    color: var(--main-text-color);
+    background: linear-gradient(90deg, #f75e05 0%, #ff774c 100%);
+}
+.bottom{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 70px;
+}
+.fifth-section-bottom-btn{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.fifth-section-bottom-btn button{
+    width: 150px;
+}
+.sixth-section-class{
+    width: 100%;
+    height: 500px;
+    margin-top: 120px;
+    justify-content: space-between;
+    display: flex;
+}
+.sixth-section-part{
+    display: flex;
+    gap: 20px;
+}
