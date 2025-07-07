@@ -12,9 +12,10 @@ body{
 }
 :root{
     --main-text-color:rgba(255, 255, 255, 1);
+    --main-btn-color: rgba(255, 63, 58, 1);
 }
 .container {
-    max-width: 1230px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0;
     width: 100%;
@@ -37,10 +38,10 @@ h6{
 h1{
     font-weight: 900;
     margin-bottom: 40px;
-    font-size: 45px;
-    line-height: 130%;
-}
-header{
+    font-size: 45px;line-height: 130%;
+    }
+    
+    header {
     background-color: rgba(246, 220, 213, 255);
     display: flex;
     padding: 20px;
@@ -62,7 +63,7 @@ nav a{
     color: rgba(66, 69, 81, 1);
 }
 nav a:hover{
-    color: rgba(255, 63, 58, 1);
+    color: var(--main-btn-color);
     transition: all 0.3s;
 
 }
@@ -143,7 +144,7 @@ nav a:hover{
     border-radius: 50%;
     width: 52px;
     height: 52px;
-    background: rgba(255, 63, 58, 1);
+    background: var(--main-btn-color);
 }
 .main-section-title h1{
     position: relative;
@@ -176,7 +177,7 @@ nav a:hover{
     height: 52px;
     border: none;
     color: var(--main-text-color);
-    background-color: rgba(255, 63, 58, 1);
+    background-color: var(--main-btn-color);
 
 }
 .main-section-bottom-sub{
@@ -199,7 +200,7 @@ nav a:hover{
 .main-cub{
     width: 8px;
     height: 8px;
-    background-color: rgba(255, 63, 58, 1);
+    background-color: var(--main-btn-color);
     border-radius: 50%;
 
 }
@@ -278,7 +279,7 @@ nav a:hover{
     align-items: center;
     border-radius: 4px;
     text-align: center;
-    color: rgba(255, 63, 58, 1);
+    color: var(--main-btn-color);
     cursor: pointer;
 }
 .third-section-products{
@@ -385,11 +386,11 @@ nav a:hover{
     display: flex;
 }
 .feedback-box div:hover {
-    color: rgba(255, 63, 58, 1);
-    border: 1px solid rgba(255, 63, 58, 1);
+    color: var(--main-btn-color);
+    border: 1px solid var(--main-btn-color);
 }
 .feedback-box-firs{
-    border: 1px solid rgba(255, 63, 58, 1);
+    border: 1px solid var(--main-btn-color);
 }
 .feedback-box div{
     justify-content: center;
@@ -400,7 +401,7 @@ nav a:hover{
     display: flex;
 }
 .feedback-box div .exp{
-    color: rgba(255, 63, 58, 1);
+    color: var(--main-btn-color);
 }
 .feedback-box div p{
     font-weight: 700;
@@ -434,8 +435,15 @@ nav a:hover{
     color: rgba(66, 69, 81, 1);
 }
 /*fifth section style*/
+.blog-item{
+    position: relative;
+}
 .fifth-section{
     background: rgba(245, 220, 213, 255);
+}
+.podcas-img{
+    position: sticky;
+    bottom: 20px;
 }
 .fifth-section-title{
         padding-top: 80px;
@@ -458,7 +466,6 @@ nav a:hover{
 .time-workshop-item:hover {
     box-shadow: 0 12px 10px -6px rgba(255, 63, 58, 0.5);
 }
-
 .p1 {
     font-size: 48px;
     font-weight: 900;
@@ -468,7 +475,6 @@ nav a:hover{
     width: 57px;
     height: 62px;
 }
-
 .time-workshop-cloc {
     display: flex;
     flex-direction: column;
@@ -476,7 +482,6 @@ nav a:hover{
     width: 100px;
     height: 50px;
 }
-
 .span1 {
     font-weight: 700;
     font-size: 20px;
@@ -488,25 +493,21 @@ nav a:hover{
     font-size: 16px;
     color: rgba(120, 122, 128, 1);
 }
-
 .master-class {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
-
 .master-class p {
     font-weight: 700;
     font-size: 20px;
     color: rgba(30, 33, 44, 1);
 }
-
 .master-class span {
     font-weight: 400;
     font-size: 16px;
     color: rgba(120, 122, 128, 1);
 }
-
 .time-workshop button {
     margin-left: auto;
     width: 136px;
@@ -521,7 +522,6 @@ nav a:hover{
     letter-spacing: 0.5px;
     
 }
- 
 .time-workshop button:hover {
     transition: all 0.2s;
     color: var(--main-text-color);
@@ -620,6 +620,8 @@ nav a:hover{
     padding-bottom: 64px;
     border-radius: 4px;
     background: var(--main-text-color);
+    width: 1000px;
+    margin: 0 auto;
     gap: 20px;
 }
 .comment{
@@ -671,7 +673,6 @@ nav a:hover{
     border-radius: 3px;
     background-color: rgba(179, 183, 188, 1);
 }
-
 .nineth-section{
     padding-top: 120px;
 }
@@ -763,5 +764,196 @@ nav a:hover{
     font-weight: 700;
     transition: all 0.s;
     color: blue;
-    
+}
+
+
+.subscribe {
+    background: linear-gradient(135deg, #ffe6e0, #fad0c4);
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.subscribe-label {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.subscribe-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #212121;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.subscribe-form input {
+    padding: 12px 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 70%;
+    font-size: 16px;
+}
+
+.subscribe-form button {
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.subscribe-bg-left,
+.subscribe-bg-right {
+    position: absolute;
+    bottom: 0;
+    width: 160px;
+}
+
+.subscribe-bg-left {
+    left: 0;
+}
+
+.subscribe-bg-right {
+    right: 0;
+}
+
+
+.footer {
+    background-color: #1e1e26;
+    color: #fff;
+    padding: 60px 20px 30px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-brand {
+    flex: 2;
+}
+
+.footer h3.logo {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.logo-x {
+    color: #ff3f3a;
+}
+
+.footer h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer p,
+.footer ul {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+}
+
+.footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.socials a {
+    margin-right: 10px;
+}
+
+.socials img {
+    width: 24px;
+    height: 24px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+.newsletter-form button {
+    background-color: #ff3f3a;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.newsletter-note {
+    font-size: 12px;
+    color: #888;
+    margin-top: 8px;
+    border: none;
+}
+
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    margin-top: 40px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: #888;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.go-top {
+    text-decoration: none;
+    color: #ccc;
+}
+
+.go-top:hover {
+    text-decoration: underline;
 }
