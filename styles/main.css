@@ -10,6 +10,9 @@ body{
     overflow-x: hidden;
     
 }
+:root{
+    --main-text-color:rgba(255, 255, 255, 1);
+}
 .container {
     max-width: 1230px;
     margin: 0 auto;
@@ -21,6 +24,21 @@ body{
     justify-content: space-between;
     align-items: center;
 
+}
+h6{
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(30, 33, 44, 1);
+}
+h1{
+    font-weight: 900;
+    margin-bottom: 40px;
+    font-size: 45px;
+    line-height: 130%;
 }
 header{
     background-color: rgba(246, 220, 213, 255);
@@ -52,7 +70,7 @@ nav a:hover{
     font-weight: 700;
     line-height: 52px;
     letter-spacing: 0.5px;
-    color: rgba(255, 255, 255, 1);
+    color: var(--main-text-color);
     width: 250px;
     border: none;
     border-radius: 4px;
@@ -157,7 +175,7 @@ nav a:hover{
     width: 201px;
     height: 52px;
     border: none;
-    color: rgba(255, 255, 255, 1);
+    color: var(--main-text-color);
     background-color: rgba(255, 63, 58, 1);
 
 }
@@ -195,22 +213,8 @@ nav a:hover{
 .secondary-section-maind_div img:first-child{
     border-radius: 4px;
 }
-.secondary-section-title h6{
-    font-weight: 700;
-    margin-bottom: 8px;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: rgba(30, 33, 44, 1);
-}
-.secondary-section-title h1{
-    font-weight: 900;
-    margin-bottom: 40px;
-    font-size: 45px;
-    line-height: 130%;
 
-}
+
 .secondary-section-check_info{
     display: flex;
     flex-direction: column;
@@ -243,8 +247,165 @@ nav a:hover{
     border: none;
     width: 161px;
     height: 44px;
-    color: rgba(255, 255, 255, 1);
+    color: var(--main-text-color);
     align-items: center;
     background-color: rgba(245, 47, 110, 1);
 
 }
+/*third setion sytle*/
+.third-section {
+    margin-top: 180px;
+}
+
+.third-section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-courses-btn {
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    width: 203px;
+    height: 52px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 52px;
+    letter-spacing: 0.5px;
+    background: transparent;
+    border: 1px solid rgba(247, 94, 5, 1);
+    align-items: center;
+    border-radius: 4px;
+    text-align: center;
+    color: rgba(255, 63, 58, 1);
+    cursor: pointer;
+}
+.third-section-products{
+    display: flex;
+    width: 600px;
+    height: 214px;
+    margin-top: 60px;
+    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.3);
+    
+    
+}
+.third-section-products:hover{
+    transition: all 0.2s;
+    box-shadow: 0px 12px 10px -6px rgba(122, 142, 231, 0.4);
+}
+.third-section-products-items{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    
+    
+}
+.third-section-products-item{
+    padding: 32px;
+}
+.third-section-products-item span{
+    display: block;
+    font-size: 14px;
+    line-height: 150%;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.third-section-products-item p{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 150%;
+    color: rgba(30, 33, 44, 1);
+    margin-bottom: 20px;
+}
+.third-section-products-item .marketing-span{
+    align-items: center;
+    color: var(--main-text-color);
+    text-align: center;
+    background-color: rgba(3, 206, 164, 1);
+    width: 100px;
+    height: 23px;
+}
+.menegment-span{
+    width: 98px;
+    height: 23px;
+    text-align: center;
+    align-items: center;
+    background: rgba(90, 135, 252, 1);
+    color: var(--main-text-color);
+}
+.price-by-work{
+    display: flex;
+    gap: 5px;
+  
+}
+
+.design-span{
+    width: 59px;
+    height: 23px;
+    align-items: center;
+    text-align: center;
+    color: var(--main-text-color);
+    background: rgba(245, 47, 110, 1);
+}
+.hr-span{
+    text-align: center;
+    align-items: center;
+    width: 111px;
+    height: 23px;
+    background: rgba(248, 152, 40, 1);
+    color: var(--main-text-color);
+
+}
+.price-by-work span:first-child{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(255, 66, 66, 1);
+    border-right: 1px rgba(120, 122, 128, 1);
+}
+.price-by-work span:last-child{
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(120, 122, 128, 1);
+}
+/*fourth-section*/
+.fourth-section{
+    margin-top: 180px;
+}
+.fourth-section-title{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    text-align: center;
+}
+.feedback-box{
+    margin-top: 60px;
+    display: flex;
+}
+.feedback-box div:hover {
+    color: rgba(255, 63, 58, 1);
+    border: 1px solid rgba(255, 63, 58, 1);
+}
+.feedback-box-firs{
+    border: 1px solid rgba(255, 63, 58, 1);
+}
+.feedback-box div{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 307px;
+    height: 46px;
+    display: flex;
+}
+
+.feedback-box div .exp{
+    color: rgba(255, 63, 58, 1);
+}
+.feedback-box div p{
+    font-weight: 700;
+    line-height: 160%;
+    color: rgba(154, 156, 165, 1);
+}
+
