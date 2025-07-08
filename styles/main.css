@@ -90,6 +90,11 @@ nav a:hover{
     line-height: 160%;
     color: rgba(66, 69, 81, 1);
 }
+.header-btn:hover{
+    transition: all 02.s;
+    cursor: pointer;
+    background: #FCB454;
+}
 /*main section*/
 .main-section{
     background-color: rgba(246, 220, 213, 255);
