@@ -578,6 +578,7 @@ nav a:hover{
     gap: 20px;
 }
 .seven-section-main_div{
+    position: relative;
     padding-top: 180px;
     background: rgba(244, 245, 246, 1);
 }
@@ -611,22 +612,25 @@ nav a:hover{
 .meet-box{
     display: flex;
     justify-content: space-evenly;
-    
 }
-.meet-box div:hover{
-    transition: all 0.4s;
-    transform: scale(1.1);
-    box-shadow: 0px 12px 10px -6px rgb(0 0 0 /10%);
-}
-.meet-box div{
+
+.meet-box-item{
+    z-index: 100;
     width: 100%;
     width: 285px;
     height: 400px;
-    border-radius: 4px;
+    transform: scale(1);
+    border-radius: 5px;
     align-items: center;
     text-align: center;
-    box-shadow: 0px 4px 4px -4px rgb(0 0 0 /5%);
+    box-shadow: 0px 4px 4px -4px rgb(0 0 0 /15%);
     background: var(--main-text-color);
+}
+.meet-box-item:hover {
+    border-radius: 5px;
+    transition: all 0.4s;
+    transform: scale(1.1);
+    box-shadow: 0px 12px 10px -6px rgb(0 0 0 /20%);
 }
 .meet-box div img{
     width: 100%;
@@ -645,8 +649,36 @@ nav a:hover{
     color: rgba(120, 122, 128, 1);
 }
 .eight-section{
+    position: relative;
     padding-top: 180px;
     background: rgba(244, 245, 246, 1);
+}
+.eight-section-next_link{
+    padding: 50px;
+    width: 100%;
+    top: 425px;
+    height: 256px;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+}
+
+
+.eight-section-next_link div {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.eight-section-next_link div:hover {
+    transition: all 0.2s;
+    cursor: pointer;
+    background: rgba(255, 63, 58, 1);
+    color: var(--main-text-color);
 }
 .eight-section-title{
     align-items: center;
@@ -715,6 +747,7 @@ nav a:hover{
 }
 .nineth-section{
     padding-top: 120px;
+    padding-bottom: 120px;
 }
 .nineth-section-title{
     display: flex;
@@ -736,9 +769,15 @@ nav a:hover{
     color: var(--main-text-color);
 }
 .blog{
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+.blog-icon{
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 .main-blog_img{
     width: 100%;
@@ -765,6 +804,13 @@ nav a:hover{
 .blog-item{
     width: 400px;
     height: 507px;
+    transform: scale(0.9);
+    box-shadow: 0px 4px 4px -4px rgb(0 0 0 /20%);
+}
+.blog-item:hover{
+    transition: all 0.3s;
+    transform: scale(1);
+    box-shadow: 0px 12px 10px -6px rgb(0 0 0 /10%);
 }
 .card-info{
     padding-bottom: 8px;
