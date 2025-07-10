@@ -24,14 +24,30 @@ html{
     width: 100%;
 }
 /*main section*/
+h6 {
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(30, 33, 44, 1);
+}
+
+h1 {
+    font-weight: 900;
+    margin-bottom: 40px;
+    font-size: 45px;
+    line-height: 130%;
+}
 .main-section{
     display: flex;
     gap: 50px;
+    background-color: rgba(246, 220, 213, 255);
 }
 .main-section_container{
     width: 100%;
     padding: 50px;
-    background-color: rgba(246, 220, 213, 255);
 }
 .main-div{
     display: flex;

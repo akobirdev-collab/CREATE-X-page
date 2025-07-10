@@ -1,65 +1,34 @@
 .wrapp-header {
-    box-shadow: 0px 3px 16px 0px rgb(0 0 0 /5%);
+    padding: 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-
+    
 }
-
-h6 {
-    font-weight: 700;
-    margin-bottom: 8px;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: rgba(30, 33, 44, 1);
-}
-
-h1 {
-    font-weight: 900;
-    margin-bottom: 40px;
-    font-size: 45px;
-    line-height: 130%;
-}
-
 header {
-
+    box-shadow: 0px 3px 16px 0px rgb(0 0 0 /5%);
+    background-color: rgba(246, 220, 213, 255);
     display: flex;
     position: sticky;
     top: 0;
     z-index: 999;
 }
-
-.wrapp-header {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(246, 220, 213, 255);
-}
-
 header nav {
     padding-left: 60px;
 }
-
 header nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
 }
-
 nav a {
     font-weight: 700;
     font-size: 16px;
     color: rgba(66, 69, 81, 1);
 }
-
 nav a:hover {
     color: var(--main-btn-color);
     transition: all 0.3s;
-
 }
-
 .header-btn {
     font-weight: 700;
     line-height: 52px;
@@ -70,7 +39,6 @@ nav a:hover {
     border-radius: 4px;
     background-color: rgba(247, 94, 5, 1);
 }
-
 .header-btn-div {
     gap: 15px;
     display: flex;
@@ -78,14 +46,12 @@ nav a:hover {
     justify-content: center;
     align-items: center;
 }
-
 .header-btn-div span {
     font-weight: 700;
     font-size: 16px;
     line-height: 160%;
     color: rgba(66, 69, 81, 1);
 }
-
 .header-btn:hover {
     transition: all 0.2s;
     cursor: pointer;
@@ -98,7 +64,6 @@ nav a:hover {
     position: relative;
     overflow: hidden;
 }
-
 .subscribe-label {
     text-transform: uppercase;
     font-weight: bold;
@@ -106,14 +71,12 @@ nav a:hover {
     margin-bottom: 10px;
     font-size: 14px;
 }
-
 .subscribe-title {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 30px;
     color: #212121;
 }
-
 .subscribe-form {
     display: flex;
     justify-content: center;
@@ -121,7 +84,6 @@ nav a:hover {
     max-width: 600px;
     margin: 0 auto;
 }
-
 .subscribe-form input {
     padding: 12px 20px;
     border-radius: 4px;
@@ -129,7 +91,6 @@ nav a:hover {
     width: 70%;
     font-size: 16px;
 }
-
 .subscribe-form button {
     background: linear-gradient(to right, #ff6a00, #ee0979);
     color: white;
@@ -139,29 +100,23 @@ nav a:hover {
     cursor: pointer;
     font-weight: bold;
 }
-
 .subscribe-bg-left,
 .subscribe-bg-right {
     position: absolute;
     bottom: 0;
     width: 160px;
 }
-
 .subscribe-bg-left {
     left: 0;
 }
-
 .subscribe-bg-right {
     right: 0;
 }
-
-
 .footer {
     background-color: #1e1e26;
     color: #fff;
     padding: 60px 20px 30px;
 }
-
 .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -170,70 +125,56 @@ nav a:hover {
     max-width: 1200px;
     margin: auto;
 }
-
 .footer-col {
     flex: 1;
     min-width: 200px;
 }
-
 .footer-brand {
     flex: 2;
 }
-
 .footer h3.logo {
     font-size: 24px;
     margin-bottom: 15px;
     color: white;
 }
-
 .logo-x {
     color: #ff3f3a;
 }
-
 .footer h4 {
     font-size: 16px;
     margin-bottom: 15px;
     font-weight: bold;
 }
-
 .footer p,
 .footer ul {
     font-size: 14px;
     color: #ccc;
 }
-
 .footer ul {
     list-style: none;
 }
-
 .footer ul li {
     margin-bottom: 8px;
 }
-
 .footer ul li a {
     color: #ccc;
     text-decoration: none;
 }
-
 .footer ul li a:hover {
     text-decoration: underline;
 }
-
 .socials a {
     margin-right: 10px;
 }
-
 .socials img {
     width: 24px;
     height: 24px;
 }
-
 .newsletter-form {
     display: flex;
     gap: 5px;
     margin-top: 10px;
 }
-
 .newsletter-form input {
 
     width: 300px;
@@ -242,7 +183,6 @@ nav a:hover {
     border: none;
     border-radius: 4px;
 }
-
 .newsletter-form button {
     background-color: #ff3f3a;
     color: #fff;
@@ -253,15 +193,12 @@ nav a:hover {
     border-radius: 4px;
     cursor: pointer;
 }
-
 .newsletter-note {
     font-size: 12px;
     color: #888;
     margin-top: 8px;
     border: none;
 }
-
-
 .footer-bottom {
     border-top: 1px solid #333;
     margin-top: 40px;
@@ -274,13 +211,10 @@ nav a:hover {
     padding-left: 40px;
     padding-right: 40px;
 }
-
-
 .go-top {
     text-decoration: none;
     color: #ccc;
 }
-
 .go-top:hover {
     text-decoration: underline;
 }
