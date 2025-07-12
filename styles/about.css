@@ -1,11 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: "Lato";
+}
 .container {
-    max-width: 1440px;
+    max-width: 1230px;
     margin: 0 auto;
     padding: 0;
     width: 100%;
+}
+:root{
+    --main-text-color:white;
+    --main-p-color:rgba(66, 69, 81, 1);
+}
+.main-section {
+    height: 468px;
+    background-color: rgba(246, 220, 213, 255);
+}
+.main-section div{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+h6{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--main-p-color);
+}
+.main-section h6{
+    padding-bottom: 12px;
+    padding-top: 120px;
+    color: rgba(255, 63, 58, 1);
+}
+.main-section h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 120px;
+    width: 1020px;
+}
+h1{
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 130%;
+    letter-spacing: 0%;   
+}
+/*secondary-setion sytyle*/
+.secondary-section{
+    background: rgba(229, 232, 237, 1);
+}
+.secondary-main-div{
+    margin-top: 120px;
+    display: flex; 
+    gap: 185px;
+}
+.secondary-main-div_title h1{
+    padding-bottom: 40px;
+}
+.secondary-main-div_title p{
+    width: 600px;
+    height: 156px;
+    margin-bottom: 48px;
+}
+.secondary-main-div_title h3{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    color: var(--main-p-color);
+    padding-bottom: 34px;
+}
+.secondary-main-div_subtitle{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 176px;
+    gap: 4px;
+}
+.secondary-main-div_subtitle div{
+    display: flex;
+    width: 100%;
+    height: 26px;
+    gap: 16px;
+}
+.secondary-main-div_subtitle div p{
+    color: var(--main-p-color);
+    justify-content: center;
+    align-items: center;
+}
+.secondary-main-div_subtitle div img{
+    width: 15.333088874816895px;
+    height: 14.666666030883789px;
+}
+.secondary-date{
+    width: 495px;
+    height: 550px;
+    padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    transition: all 0.2s ease;
+    border-radius: 5px;
+    background: #FBFBFB;
+    border-width: 1px solid rgba(229, 232, 237, 1);
+    box-shadow: 0 12px 10px -6px rgba(154, 156, 165, 0.3);
+}
+.secondary-date:hover{
+    transition: all 0.2s ease;
+    transform: scale(1.08);
+    box-shadow: 0 12px 10px -6px rgba(154, 156, 165, 0.5);
+} 
+.secondary-date-item span{
+    display: inline-block;
+}
+.secondary-date-item span:first-child{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+    color: rgba(30, 33, 44, 1);
+}
+.secondary-date-item h4{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    color: rgba(255, 63, 58, 1);
+    padding-bottom: 8px;
+}
+.secondary-date-item span:last-child{
+    width: 431px;
+    height: 26px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: rgba(120, 122, 128, 1);
+}
+.secondary-date_btn{
+    width: 100%;
+}
+.secondary-date_btn button{
+    width: 100%;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(247, 94, 5, 1);
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    line-height: 44px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    vertical-align: middle;
+}
+.secondary-date_btn button:hover{
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: red;
+}
+/*third-section style*/
+.third-section-main_div {
+    margin-top: 120px;
+    display: flex;
+    gap: 135px;
+}
+
+.third-div_images {
+    position: relative;
+    width: 495px;
+    height: 580px;
+    border-radius: 4px;
+    background: rgba(255, 207, 45, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.third-section-title h6{
+    padding-bottom: 8px;
+}
+.third-div_images img {
+    width: 100%;
+    height: auto;
+    max-height: 580px;
+    object-fit: contain;
+}
+.feed-customers{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+.third-section-title .company-sub{
+        font-weight: 400;
+        padding-top: 16px;
+        display: inline-block;
+        font-size: 20px;
+        line-height: 150%;
+        margin-bottom: 32px;
+}
+.third-section-title p{
+    width: 600px;
+    height: 156px;
+    color: rgba(66, 69, 81, 1);
+    margin-bottom: 40px;
+}
+.third-section-social{
+    display: flex;
+    gap: 24px;
+}
+.third-section-social a:hover{
+    transform: scale(1.2);
+    transition: all 0.2s ease;
+    color: rgba(255, 63, 58, 1);
+}
+/*fouth-section style*/
+.fouth-section_title{
+    margin-top: 180px;
+    text-align: center;
+    align-items: center;
+}
+.fouth-section-sub{
+    margin-top: 60px;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 175px;
+}
+.fouth-section-sub div{
+    width: 285px;
+    height: 192px;
+}
+.fouth-section-sub div h2{
+        font-weight: 900;
+        font-size: 46px;
+        line-height: 130%;
+        vertical-align: middle;
+        padding-bottom: 16px;
+        color: rgba(215, 218, 221, 1);
+}
+.fouth-section-sub div p{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        vertical-align: middle;
+        padding-bottom: 6px;
+        color: rgba(30, 33, 44, 1);
+}
+.fouth-section-sub div span{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: rgba(120, 122, 128, 1);
+}
+.fouth-section_time-sale{
+    width: 100%;
+    height: 243px;
+    padding: 30px 40px;
+    background-color: rgba(246, 220, 213, 255);
+}
+.fouth-section_time-sale-title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+.fouth-section_time-sale-title h2{
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 130%;
+        color: rgba(30, 33, 44, 1);
+}
+.fourth-time{
+    display: flex;
+    gap: 24px;
+    width: 182px;
+    height: 48px;
+}
+.fourth-time div{
+    width: 27px;
+    height: 48px;
+    gap: 4px;
+}
+.fourth-time h5{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    vertical-align: middle;
+    color: rgba(30, 33, 44, 1);
+}
+.fourth-time span{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        vertical-align: middle;
+}
+.fouth-section_date_link form {
+    display: flex;
+    gap: 50px;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.fouth-section_date_link form .input{
+    display: flex;
+    flex-direction: column;
+}
+.fouth-section_date_link form label{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: rgba(66, 69, 81, 1);
+        padding-bottom: 8px;
+}
+.fouth-section_date_link form input{
+    width: 278.7px;
+    height: 35px;
+    padding: 12px 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(215, 218, 221, 1);
+    background: rgba(255, 255, 255, 1);
+    color: rgba(154, 156, 165, 1);
+}
+.fouth-section-btn{
+    height: 60px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.fouth-section-btn button{
+    width: 165px;
+    height: 35px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgba(255, 63, 58, 1);
+    color: white; 
+}
+/*fifth-seftion style*/
+.fifth-section_first_div{
+    margin-top: 180px;
+    margin-bottom: 180px;
+    display: flex;
+
+}
+.fifth-section-main-div_subtitle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fifth-section-main-div_subtitle div {
+    display: flex;
+    gap: 16px;
+    width: 600px;
+    align-items: flex-start;
+}
+
+.fifth-section-main-div_subtitle div img {
+    width: 24px;
+    height: 24px;
+    margin-top: 4px;
+}
+
+.fifth-section-main-div_subtitle div p {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(66, 69, 81, 1);
+    margin: 0;
 }
