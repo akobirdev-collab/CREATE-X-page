@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Events Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #fff;
+      color: #1e212c;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    
+    .navbar {
+      border-bottom: 1px solid #e5e8ed;
+      padding: 20px 0;
+    }
+
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar img {
+      height: 40px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #424551;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #ff3f3a;
+    }
+
+    .nav-links li a.active {
+      color: #ff3f3a;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .btn-consult {
+      background: #ff3f3a;
+      color: #fff;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    .btn-consult:hover {
+      background: #e63631;
+    }
+
+    .login {
+      color: #424551;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    
+    .events-section {
+      padding: 60px 0;
+      background: #f4f5f7;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0 0 40px;
+      color: #1e212c;
+    }
+
+    
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 40px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .filters select,
+    .filters input {
+      padding: 12px 16px;
+      border: 1px solid #d7dadd;
+      border-radius: 4px;
+      font-size: 14px;
+      background: #fff;
+      color: #424551;
+    }
+
+    .filters input {
+      min-width: 200px;
+    }
+
+    .filters .icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .filters .icons span {
+      padding: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      border: 1px solid #d7dadd;
+      border-radius: 4px;
+      background: #fff;
+      transition: background 0.3s ease;
+    }
+
+    .filters .icons span:hover {
+      background: #f4f5f7;
+    }
+
+   
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .event-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .event-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .event-card-header {
+      background: linear-gradient(135deg, #ff3f3a, #ff6b6b);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .event-card-date {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .event-card-month {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .event-card-time {
+      font-size: 12px;
+      opacity: 0.9;
+      margin-top: 10px;
+    }
+
+    .event-card-body {
+      padding: 20px;
+    }
+
+    .event-card-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1e212c;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .event-card-type {
+      font-size: 14px;
+      color: #787a80;
+      margin-bottom: 20px;
+    }
+
+    .event-card-button {
+      width: 100%;
+      padding: 12px;
+      background: transparent;
+      border: 1px solid #ff3f3a;
+      color: #ff3f3a;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .event-card-button:hover {
+      background: #ff3f3a;
+      color: #fff;
+    }
+
+    .event-card-button.highlight {
+      background: #ff3f3a;
+      color: #fff;
+    }
+
+    .event-card-button.highlight:hover {
+      background: #e63631;
+    }
+
+    
+    .view-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .view-toggle button {
+      padding: 8px 16px;
+      border: 1px solid #d7dadd;
+      background: #fff;
+      color: #787a80;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .view-toggle button.active {
+      background: #ff3f3a;
+      color: #fff;
+      border-color: #ff3f3a;
+    }
+
+    .view-toggle button:hover {
+      border-color: #ff3f3a;
+      color: #ff3f3a;
+    }
+
+    .view-toggle button.active:hover {
+      background: #e63631;
+    }
+
+    
+    .events-list.hidden,
+    .events-grid.hidden {
+      display: none;
+    }
+
+    .event {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #e5e8ed;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 16px;
+      background-color: #fff;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .event:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .event-date {
+      min-width: 80px;
+      text-align: center;
+      margin-right: 20px;
+    }
+
+    .event-date .day {
+      font-size: 28px;
+      font-weight: bold;
+      color: #ff3f3a;
+      display: block;
+      line-height: 1;
+    }
+
+    .event-date .month {
+      font-size: 14px;
+      color: #787a80;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .event-info {
+      flex: 1;
+      padding: 0 20px;
+    }
+
+    .event-info .time {
+      font-size: 14px;
+      color: #787a80;
+      margin: 0 0 8px;
+      font-weight: 500;
+    }
+
+    .event-info .title {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 8px;
+      color: #1e212c;
+      line-height: 1.4;
+    }
+
+    .event-info .type {
+      font-size: 14px;
+      color: #787a80;
+      font-weight: 500;
+    }
+
+    .event-action button {
+      background-color: transparent;
+      color: #ff3f3a;
+      border: 1px solid #ff3f3a;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .event-action button:hover {
+      background-color: #ff3f3a;
+      color: #fff;
+    }
+
+    .event-action button.highlight {
+      background-color: #ff3f3a;
+      color: #fff;
+    }
+
+    .event-action button.highlight:hover {
+      background-color: #e63631;
+    }
+
+   
+    .pagination {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .pagination a {
+      margin: 0 8px;
+      text-decoration: none;
+      color: #9a9ca5;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .pagination a:hover {
+      background: #f4f5f7;
+      color: #ff3f3a;
+    }
+
+    .pagination a.active {
+      color: #ff3f3a;
+      background: #fff;
+      border: 1px solid #ff3f3a;
+    }
+
+    .footer {
+      background-color: #1e1e26;
+      color: #fff;
+      padding: 80px 0 30px;
+    }
+
+    
+    .newsletter-section {
+      background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+      padding: 80px 0;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .newsletter-section h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #1e212c;
+      margin-bottom: 40px;
+    }
+
+    .newsletter-section .newsletter-form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      gap: 0;
+    }
+
+    .newsletter-section .newsletter-form input {
+      flex: 1;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .newsletter-section .newsletter-form button {
+      padding: 15px 25px;
+      background: #ff3f3a;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .newsletter-section .newsletter-form button:hover {
+      background: #e63631;
+    }
+
+    .footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 60px 0 30px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-brand {
+    grid-column: 1 / 2;
+}
+
+.footer-logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+}
+
+.footer-logo .highlight {
+    color: #ff6b9d;
+}
+
+.footer-description {
+    color: #bdc3c7;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #bdc3c7;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+.social-link:hover {
+    background: #ff6b9d;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #ff6b9d;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #bdc3c7;
+    font-size: 14px;
+}
+
+.contact-icon {
+    color: #ff6b9d;
+    font-size: 16px;
+}
+
+.footer-newsletter {
+    display: flex;
+    gap: 0;
+    margin-bottom: 15px;
+}
+
+.footer-email-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #34495e;
+    border-radius: 6px 0 0 6px;
+    background: #34495e;
+    color: #ecf0f1;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.footer-email-input:focus {
+    border-color: #ff6b9d;
+}
+
+.footer-email-input::placeholder {
+    color: #7f8c8d;
+}
+
+.footer-subscribe-btn {
+    padding: 12px 16px;
+    background: #ff6b9d;
+    color: white;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 16px;
+}
+
+.footer-subscribe-btn:hover {
+    background: #ff5a8a;
+}
+
+.newsletter-note {
+    color: #7f8c8d;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid #34495e;
+}
+
+.footer-copyright {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.heart {
+    color: #ff6b9d;
+    font-size: 16px;
+}
+
+.go-to-top {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.go-to-top:hover {
+    color: #ff6b9d;
+}
+
+
+
+   
+  </style>
+</head>
+<body>
+
+
+  <header class="navbar">
+    <div class="container">
+     <div>
+      <img src="./png/logo.png" alt="">
+     </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../pages/about.html">About Us</a></li>
+          <li><a href="../pages/secondary.html">Courses</a></li>
+          <li><a href="#" >Events</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="#" class="btn-consult">Get consultation</a>
+        <source><img src="./png/Profile.png" alt="">Log in / Register<source>
+      </div>
+
+     
+      <div class="events-grid hidden" id="eventsGrid">
+        
+        <div class="event-card">
+          <div class="event-card-header">
+            <div class="event-card-date">05</div>
+            <div class="event-card-month">August</div>
+            <div class="event-card-time">11:00 - 14:00</div>
+          </div>
+          <div class="event-card-body">
+            <h3 class="event-card-title">Formation of the organizational structure of the company in the face of uncertainty.</h3>
+            <p class="event-card-type">Online master-class</p>
+            <button class="event-card-button highlight">View more</button>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-header">
+            <div class="event-card-date">03</div>
+            <div class="event-card-month">August</div>
+            <div class="event-card-time">10:00 - 13:00</div>
+          </div>
+          <div class="event-card-body">
+            <h3 class="event-card-title">Team management essentials for new managers.</h3>
+            <p class="event-card-type">Online workshop</p>
+            <button class="event-card-button">View more</button>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-header">
+            <div class="event-card-date">07</div>
+            <div class="event-card-month">August</div>
+            <div class="event-card-time">12:00 - 14:00</div>
+          </div>
+          <div class="event-card-body">
+            <h3 class="event-card-title">Effective time management strategies.</h3>
+            <p class="event-card-type">Online lecture</p>
+            <button class="event-card-button">View more</button>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-header">
+            <div class="event-card-date">09</div>
+            <div class="event-card-month">August</div>
+            <div class="event-card-time">14:00 - 17:00</div>
+          </div>
+          <div class="event-card-body">
+            <h3 class="event-card-title">Communication skills for effective leadership.</h3>
+            <p class="event-card-type">Online master-class</p>
+            <button class="event-card-button">View more</button>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-header">
+            <div class="event-card-date">12</div>
+            <div class="event-card-month">August</div>
+            <div class="event-card-time">09:00 - 11:00</div>
+          </div>
+          <div class="event-card-body">
+            <h3 class="event-card-title">Remote team collaboration best practices.</h3>
+            <p class="event-card-type">Online workshop</p>
+            <button class="event-card-button">View more</button>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-header">
+            <div class="event-card-date">15</div>
+            <div class="event-card-month">August</div>
+            <div class="event-card-time">15:00 - 17:00</div>
+          </div>
+          <div class="event-card-body">
+            <h3 class="event-card-title">Design thinking: solve real problems creatively.</h3>
+            <p class="event-card-type">Online lecture</p>
+            <button class="event-card-button">View more</button>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-header">
+            <div class="event-card-date">20</div>
+            <div class="event-card-month">August</div>
+            <div class="event-card-time">10:00 - 12:00</div>
+          </div>
+          <div class="event-card-body">
+            <h3 class="event-card-title">Basics of business model generation.</h3>
+            <p class="event-card-type">Online master-class</p>
+            <button class="event-card-button">View more</button>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-header">
+            <div class="event-card-date">25</div>
+            <div class="event-card-month">August</div>
+            <div class="event-card-time">13:00 - 15:00</div>
+          </div>
+          <div class="event-card-body">
+            <h3 class="event-card-title">How to manage stress and burnout in the workplace.</h3>
+            <p class="event-card-type">Online workshop</p>
+            <button class="event-card-button">View more</button>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-header">
+            <div class="event-card-date">30</div>
+            <div class="event-card-month">August</div>
+            <div class="event-card-time">11:00 - 13:00</div>
+          </div>
+          <div class="event-card-body">
+            <h3 class="event-card-title">Mastering presentation skills: from good to great.</h3>
+            <p class="event-card-type">Online lecture</p>
+            <button class="event-card-button">View more</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+  <section class="events-section">
+    <div class="container">
+      <h2 class="section-title">Lectures, workshops & master-classes</h2>
+
+      
+      <div class="filters">
+        <select>
+          <option>All themes</option>
+          <option>Management</option>
+          <option>Design</option>
+          <option>Development</option>
+        </select>
+        <select>
+          <option>Newest</option>
+          <option>Oldest</option>
+          <option>Most Popular</option>
+        </select>
+        <select>
+          <option>9</option>
+          <option>18</option>
+          <option>27</option>
+        </select>
+        <input type="text" placeholder="Search event..." />
+        <div class="icons">
+         <a href="./avants.html" target="_blank"><img src="../event-svg/list.svg" alt=""></a>
+          <a href="./avants.html"><img src="../event-svg/Vector (5).svg" alt=""></a>
+        </div>
+      </div>
+
+      
+      <div class="view-toggle">
+        <button id="listView" class="active">List View</button>
+        <button id="gridView">Grid View</button>
+      </div>
+
+     
+      <div class="events-list" id="eventsList">
+       
+        <div class="event">
+          <div class="event-date">
+            <span class="day">05</span>
+            <span class="month">August</span>
+          </div>
+          <div class="event-info">
+            <p class="time">11:00 - 14:00</p>
+            <h3 class="title">Formation of the organizational structure of the company in the face of uncertainty.</h3>
+            <p class="type">Online master-class</p>
+          </div>
+          <div class="event-action">
+            <button class="highlight">View more</button>
+          </div>
+        </div>
+
+        
+        <div class="event">
+          <div class="event-date">
+            <span class="day">03</span>
+            <span class="month">August</span>
+          </div>
+          <div class="event-info">
+            <p class="time">10:00 - 13:00</p>
+            <h3 class="title">Team management essentials for new managers.</h3>
+            <p class="type">Online workshop</p>
+          </div>
+          <div class="event-action">
+            <button>View more</button>
+          </div>
+        </div>
+
+        
+        <div class="event">
+          <div class="event-date">
+            <span class="day">07</span>
+            <span class="month">August</span>
+          </div>
+          <div class="event-info">
+            <p class="time">12:00 - 14:00</p>
+            <h3 class="title">Effective time management strategies.</h3>
+            <p class="type">Online lecture</p>
+          </div>
+          <div class="event-action">
+            <button>View more</button>
+          </div>
+        </div>
+
+        
+        <div class="event">
+          <div class="event-date">
+            <span class="day">09</span>
+            <span class="month">August</span>
+          </div>
+          <div class="event-info">
+            <p class="time">14:00 - 17:00</p>
+            <h3 class="title">Communication skills for effective leadership.</h3>
+            <p class="type">Online master-class</p>
+          </div>
+          <div class="event-action">
+            <button>View more</button>
+          </div>
+        </div>
+
+        
+        <div class="event">
+          <div class="event-date">
+            <span class="day">12</span>
+            <span class="month">August</span>
+          </div>
+          <div class="event-info">
+            <p class="time">09:00 - 11:00</p>
+            <h3 class="title">Remote team collaboration best practices.</h3>
+            <p class="type">Online workshop</p>
+          </div>
+          <div class="event-action">
+            <button>View more</button>
+          </div>
+        </div>
+
+        
+        <div class="event">
+          <div class="event-date">
+            <span class="day">15</span>
+            <span class="month">August</span>
+          </div>
+          <div class="event-info">
+            <p class="time">15:00 - 17:00</p>
+            <h3 class="title">Design thinking: solve real problems creatively.</h3>
+            <p class="type">Online lecture</p>
+          </div>
+          <div class="event-action">
+            <button>View more</button>
+          </div>
+        </div>
+
+       
+        <div class="event">
+          <div class="event-date">
+            <span class="day">20</span>
+            <span class="month">August</span>
+          </div>
+          <div class="event-info">
+            <p class="time">10:00 - 12:00</p>
+            <h3 class="title">Basics of business model generation.</h3>
+            <p class="type">Online master-class</p>
+          </div>
+          <div class="event-action">
+            <button>View more</button>
+          </div>
+        </div>
+
+        
+        <div class="event">
+          <div class="event-date">
+            <span class="day">25</span>
+            <span class="month">August</span>
+          </div>
+          <div class="event-info">
+            <p class="time">13:00 - 15:00</p>
+            <h3 class="title">How to manage stress and burnout in the workplace.</h3>
+            <p class="type">Online workshop</p>
+          </div>
+          <div class="event-action">
+            <button>View more</button>
+          </div>
+        </div>
+
+        
+        <div class="event">
+          <div class="event-date">
+            <span class="day">30</span>
+            <span class="month">August</span>
+          </div>
+          <div class="event-info">
+            <p class="time">11:00 - 13:00</p>
+            <h3 class="title">Mastering presentation skills: from good to great.</h3>
+            <p class="type">Online lecture</p>
+          </div>
+          <div class="event-action">
+            <button>View more</button>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="pagination">
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">→</a>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <section class="newsletter-section">
+    <div class="container">
+      <h2>Subscribe to the Createx School<br>announcements</h2>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your working email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+</section>
+
+    
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            
+            <div class="footer-brand">
+                <img src="svg/logo (11).svg" alt="">
+                <p class="footer-description">
+                    Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. We provide relevant approaches to online learning, internships and employment in the largest companies in the country.
+                </p>
+                <div class="social-links">
+                    <img src="../event-svg/Facebook (1).svg" alt="">
+                    <img src="../event-svg/Vector (4).svg" alt="">
+                    <img src="../event-svg/YouTube (2).svg" alt="">
+                    <img src="../event-svg/telegram (4).svg" alt="">
+                    <img src="../event-svg/Instagram (3).svg" alt="">
+                   <img src="../event-svg/Linked-In (3).svg" alt="">
+                </div>
+            </div>
+
+           
+            <div class="footer-column">
+                <h4 class="footer-title">SITE MAP</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-column">
+                <h4 class="footer-title">COURSES</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Management</a></li>
+                    <li><a href="#">HR & Recruiting</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Development</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-column">
+                <h4 class="footer-title">CONTACT US</h4>
+                <div class="contact-info">
+                    <p class="contact-item">
+                        <img src="../event-svg/iPhone (1).svg" alt="">
+                        (405) 555-0128
+                    </p>
+                    <p class="contact-item">
+                        <img src="../event-svg/Union (1).svg" alt="">
+                        hello@createx.com
+                    </p>
+                </div>
+            </div>
+
+            
+            <div class="footer-column">
+                <h4 class="footer-title">SIGN UP TO OUR NEWSLETTER</h4>
+                <form class="footer-newsletter">
+                    <input type="email" class="footer-email-input" placeholder="Email address">
+                    <button type="submit" class="footer-subscribe-btn">#</button>
+                </form>
+                <p class="newsletter-note">
+                    *Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.
+                </p>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p class="footer-copyright">
+                © All rights reserved. Made with <span><img src="../event-svg/Heart (3).svg" alt=""></span> by Createx Studio
+            </p>
+            <a href="#" class="go-to-top">GO TO TOP</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
