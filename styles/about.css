@@ -380,3 +380,365 @@ h1{
     color: rgba(66, 69, 81, 1);
     margin: 0;
 }
+.lesson-wrapper{
+    margin-top: 100px;
+}
+.lesson-box{
+    display: flex;
+    gap: 100px;
+
+}
+.lesson {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 24px;
+}
+
+.lesson img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.lesson p {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+        color: rgba(255, 63, 58, 1);
+}
+
+.lesson span {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: 0%;
+        color: rgba(30, 33, 44, 1);
+}
+/*sixth-section*/
+.sixth-section {
+    position: relative;
+    padding: 180px 20px 100px 20px;
+    background: rgba(244, 245, 246, 1);
+}
+
+.sixth-section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sixth-section-title h6 {
+    font-size: 14px;
+    color: rgba(120, 122, 128, 1);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.sixth-section-title h1 {
+    font-size: 32px;
+    color: rgba(30, 33, 44, 1);
+}
+
+.student-commen {
+    display: flex;
+    gap: 20px;
+    background: white;
+    border-radius: 4px;
+    padding: 64px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.student-commen img:first-child {
+    width: 50px;
+    height: auto;
+}
+
+.comment {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: rgba(66, 69, 81, 1);
+    margin-bottom: 30px;
+}
+
+.person-info-box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.person-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.person-info p {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: rgba(30, 33, 44, 1);
+}
+
+.person-info span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: rgba(120, 122, 128, 1);
+}
+.sixth-section-next_link {
+    margin: 40px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.sixth-section-next_link div {
+    width: 40px;
+    height: 40px;
+    background: white;
+    color: rgba(30, 33, 44, 1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.sixth-section-next_link div:hover {
+    background: rgba(255, 63, 58, 1);
+    color: white;
+    cursor: pointer;
+}
+.comment-line {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+.comment-line div {
+    width: 8px;
+    height: 8px;
+    background: rgba(208, 212, 216, 1);
+    border-radius: 50%;
+}
+.comment-line div:first-child {
+    background: rgba(255, 63, 58, 1);
+}
+/*seven section*/
+
+.seventh-section_main{
+    display: flex;
+    gap: 185px;
+}
+.seventh-section_main img{
+    width: 500px;
+    height: 502px;
+    margin-top: 194px;
+}
+.form-section {
+    margin-top: 180px;
+    width: 495px;
+    height: 530px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-section h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: rgba(30, 33, 44, 1);
+}
+
+.form-section p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    height: 52px;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.form-group button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #e5533c;
+}
+.view-courses-btn {
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    width: 203px;
+    height: 52px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 52px;
+    letter-spacing: 0.5px;
+    background: transparent;
+    border: 1px solid rgba(247, 94, 5, 1);
+    align-items: center;
+    border-radius: 4px;
+    text-align: center;
+    color: var(--main-btn-color);
+    cursor: pointer;
+}
+
+.third-section-products {
+    display: flex;
+    width: 600px;
+    height: 214px;
+    margin-top: 60px;
+    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.3);
+
+
+}
+
+.third-section-products:hover {
+    transition: all 0.2s;
+    box-shadow: 0px 12px 10px -6px rgba(122, 142, 231, 0.4);
+}
+
+.third-section-products-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.third-section-products-item {
+    padding: 32px;
+}
+.third-section-products-item span {
+    display: block;
+    font-size: 14px;
+    line-height: 150%;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.third-section-products-item p {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 150%;
+    color: rgba(30, 33, 44, 1);
+    margin-bottom: 20px;
+}
+.third-section-products-item .marketing-span {
+    align-items: center;
+    color: var(--main-text-color);
+    text-align: center;
+    background-color: rgba(3, 206, 164, 1);
+    width: 100px;
+    height: 23px;
+}
+.menegment-span {
+    width: 98px;
+    height: 23px;
+    text-align: center;
+    align-items: center;
+    background: rgba(90, 135, 252, 1);
+    color: var(--main-text-color);
+}
+.price-by-work {
+    display: flex;
+    gap: 5px;
+
+}
+.design-span {
+    width: 59px;
+    height: 23px;
+    align-items: center;
+    text-align: center;
+    color: var(--main-text-color);
+    background: rgba(245, 47, 110, 1);
+}
+
+.hr-span {
+    text-align: center;
+    align-items: center;
+    width: 111px;
+    height: 23px;
+    background: rgba(248, 152, 40, 1);
+    color: var(--main-text-color);
+
+}
+
+.price-by-work span:first-child {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(255, 66, 66, 1);
+    border-right: 1px rgba(120, 122, 128, 1);
+}
+
+.price-by-work span:last-child {
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(120, 122, 128, 1);
+}
+button {
+    margin-left: auto;
+    width: 136px;
+    height: 44px;
+    font-weight: 700;
+    font-size: 14px;
+    color: rgba(245, 47, 110, 1);
+    border: 1px solid rgba(247, 94, 5, 1);
+    border-radius: 4px;
+    cursor: pointer;
+    background: transparent;
+    letter-spacing: 0.5px;
+
+}
+
+button:hover {
+    transition: all 0.2s;
+    color: white;
+    background: linear-gradient(90deg, #f75e05 0%, #ff774c 100%);
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 70px;
+}
+
+.fifth-section-bottom-btn {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.fifth-section-bottom-btn button {
+    width: 150px;
+}

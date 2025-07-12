@@ -620,102 +620,125 @@ h1 {
     line-height: 160%;
     color: rgba(120, 122, 128, 1);
 }
-.eight-section{
+.eight-section {
     position: relative;
-    padding-top: 180px;
+    padding: 180px 20px 100px 20px;
     background: rgba(244, 245, 246, 1);
 }
-.eight-section-next_link{
-    padding: 50px;
-    width: 100%;
-    top: 425px;
-    height: 256px;
-    display: flex;
-    position: absolute;
-    justify-content: space-between;
-}
 
-
-.eight-section-next_link div {
-    width: 40px;
-    display: flex;
-    justify-content: center;
+.eight-section-title {
     text-align: center;
-    align-items: center;
-    height: 40px;
-    border-radius: 50%;
+    margin-bottom: 40px;
 }
 
-.eight-section-next_link div:hover {
-    transition: all 0.2s;
-    cursor: pointer;
-    background: rgba(255, 63, 58, 1);
-    color: var(--main-text-color);
+.eight-section-title h6 {
+    font-size: 14px;
+    color: rgba(120, 122, 128, 1);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
 }
-.eight-section-title{
-    align-items: center;
-    text-align: center;  
+
+.eight-section-title h1 {
+    font-size: 32px;
+    color: rgba(30, 33, 44, 1);
 }
-.student-commen{
+
+.student-commen {
     display: flex;
-    padding-left: 105px;
-    padding-right: 105px;
-    padding-top: 64px;
-    padding-bottom: 64px;
-    border-radius: 4px;
-    background: var(--main-text-color);
-    width: 1000px;
-    margin: 0 auto;
     gap: 20px;
+    background: white;
+    border-radius: 4px;
+    padding: 64px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
 }
-.comment{
+
+.student-commen img:first-child {
+    width: 50px;
+    height: auto;
+}
+
+.comment {
     font-weight: 400;
     font-size: 20px;
     line-height: 150%;
     color: rgba(66, 69, 81, 1);
+    margin-bottom: 30px;
 }
-.person-info-box{
+
+.person-info-box {
     display: flex;
-    gap: 30px;
+    gap: 20px;
+    align-items: center;
 }
-.person-info{
-    justify-content: center;
-    text-align: left;
-    align-items: left;
+
+.person-info {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
-.person-info p{
+
+.person-info p {
     font-weight: 700;
     font-size: 16px;
     line-height: 160%;
     color: rgba(30, 33, 44, 1);
-}.person-info span{
+}
+
+.person-info span {
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
     color: rgba(120, 122, 128, 1);
 }
-.comment-line{
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    margin-top: 60px;
+
+/* Navigatsiya oklar */
+.eight-section-next_link {
+    margin: 40px auto 0 auto;
     display: flex;
-    padding-bottom: 100px;
-    gap: 12px;
+    justify-content: center;
+    gap: 20px;
 }
-.comment-line div:first-child{
-    width: 30px;
-    border-radius: 3px;
-    background: rgba(66, 69, 81, 1);
+
+.eight-section-next_link div {
+    width: 40px;
+    height: 40px;
+    background: white;
+    color: rgba(30, 33, 44, 1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
-.comment-line div{
-    width: 30px;
-    height: 2px;
-    border-radius: 3px;
-    background-color: rgba(179, 183, 188, 1);
+
+.eight-section-next_link div:hover {
+    background: rgba(255, 63, 58, 1);
+    color: white;
+    cursor: pointer;
+}
+
+/* Pastdagi comment indicator line */
+.comment-line {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.comment-line div {
+    width: 8px;
+    height: 8px;
+    background: rgba(208, 212, 216, 1);
+    border-radius: 50%;
+}
+
+.comment-line div:first-child {
+    background: rgba(255, 63, 58, 1);
 }
 .nineth-section{
     padding-top: 120px;
